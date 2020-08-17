@@ -16,7 +16,7 @@ export default function CourseForm({ courseAdded }) {
     const submitCourse = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('/api/courses', {
+            const res = await fetch('/.netlify/functions/courses', {
                 method: 'POST',
                 body: JSON.stringify({
                     name,
